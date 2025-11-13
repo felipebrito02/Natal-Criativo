@@ -5,7 +5,7 @@ const features = [
   {
     icon: Download,
     title: "Download Instantâneo",
-    description: "Acesso imediato após a compra",
+    description: "Acesso imediato ao PDF após a compra",
   },
   {
     icon: Shield,
@@ -27,7 +27,7 @@ const features = [
 export default function CTASection() {
   const handlePurchaseClick = () => {
     console.log("Botão de compra clicado");
-    window.open("https://exemplo.com/comprar", "_blank");
+    window.open("https://pay.kiwify.com.br/zvXvH87", "_blank");
   };
 
   return (
@@ -38,7 +38,9 @@ export default function CTASection() {
             Comece Hoje Mesmo
           </h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Não perca a oportunidade de criar decorações natalinas únicas e especiais. Com 300 moldes exclusivos, as possibilidades são infinitas para tornar seu Natal mágico e memorável.
+            Não perca a oportunidade de criar decorações natalinas únicas e
+            especiais. Com 300 moldes exclusivos, as possibilidades são
+            infinitas para tornar seu Natal mágico e memorável.
           </p>
         </div>
 
@@ -53,7 +55,9 @@ export default function CTASection() {
                 <feature.icon className="h-6 w-6" />
               </div>
               <h3 className="font-semibold text-foreground">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <p className="text-sm text-muted-foreground">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

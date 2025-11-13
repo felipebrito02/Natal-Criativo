@@ -9,12 +9,19 @@ export default function VideoSection() {
                 Descubra a Magia do Feltro
               </h2>
               <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                Este e-book exclusivo contém <strong className="text-foreground">300 moldes de artesanato natalino</strong> em feltro, cuidadosamente selecionados para tornar seu Natal inesquecível.
+                Este e-book exclusivo contém{" "}
+                <strong className="text-foreground">
+                  300 moldes de artesanato natalino
+                </strong>{" "}
+                em feltro, cuidadosamente selecionados para tornar seu Natal
+                inesquecível.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="font-semibold text-xl md:text-2xl text-foreground">O que você vai receber:</h3>
+              <h3 className="font-semibold text-xl md:text-2xl text-foreground">
+                O que você vai receber:
+              </h3>
               <ul className="space-y-3 text-base md:text-lg text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="text-accent text-xl">✓</span>
@@ -45,13 +52,13 @@ export default function VideoSection() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="/videos/meu-video.mp4"
                 title="Apresentação do E-book"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 data-testid="video-presentation"
-                className="w-full h-full"
+                className="w-full max-w-sm mx-auto"
               />
             </div>
           </div>

@@ -27,7 +27,8 @@ export default function GallerySection() {
             Exemplos de Artesanato
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Veja alguns dos lindos projetos que você poderá criar com nossos moldes exclusivos
+            Veja alguns dos lindos projetos que você poderá criar com nossos
+            moldes exclusivos
           </p>
         </div>
 
