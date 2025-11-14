@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { Check, Clock, Gift } from "lucide-react";
+import { Award, Check, Clock, Download, Gift, Shield } from "lucide-react";
 
 const included = [
   "300+ Moldes de Feltro em Alta Qualidade",
@@ -20,6 +21,38 @@ const bonuses = [
 ];
 
 export default function CTASection() {
+  // Countdown timer
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Defina o tempo alvo (ex: 24h a partir de agora)
+    const targetDate = new Date();
+    targetDate.setHours(targetDate.getHours() + 24);
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60),
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        setTimeLeft({ hours, minutes, seconds });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="oferta"
@@ -96,25 +129,30 @@ export default function CTASection() {
 
             <div className="text-center space-y-2 pt-4">
               <div className="flex items-center justify-center gap-2 text-green-600">
-                <Check className="w-5 h-5" />
+                <Download className="w-5 h-5" />
                 <span>Acesso Imediato após o Pagamento</span>
               </div>
               <div className="flex items-center justify-center gap-2 text-green-600">
-                <Check className="w-5 h-5" />
+                <Award className="w-5 h-5" />
                 <span>Garantia de 7 Dias</span>
               </div>
               <div className="flex items-center justify-center gap-2 text-green-600">
-                <Check className="w-5 h-5" />
+                <Shield className="w-5 h-5" />
                 <span>Pagamento 100% Seguro</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
+        {/* Timer Funcional */}
         <div className="text-center mt-8">
           <p className="text-gray-600">
             ⚠️ Essa oferta especial expira em:{" "}
-            <span className="text-red-600">23:47:32</span>
+            <span className="text-red-600 font-bold">
+              {String(timeLeft.hours).padStart(2, "0")}:
+              {String(timeLeft.minutes).padStart(2, "0")}:
+              {String(timeLeft.seconds).padStart(2, "0")}
+            </span>
           </p>
         </div>
       </div>
