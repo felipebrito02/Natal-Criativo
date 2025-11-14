@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
 import GallerySection from "@/components/GallerySection";
 import CTASection from "@/components/CTASection";
+import SalePopup from "@/components/SalePopUp";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <VideoSection />
       <GallerySection />
       <CTASection />
+      <SalePopup />
     </div>
   );
 }

@@ -3,23 +3,23 @@ import { Card, CardContent } from "./ui/card";
 import { Check, Clock, Gift } from "lucide-react";
 
 const included = [
-  "150+ Moldes de Feltro em Alta Qualidade",
-  "Tutoriais Passo a Passo em Vídeo",
-  "E-book: Como Vender seu Artesanato",
-  "Lista de Fornecedores Confiáveis",
-  "Acesso à Comunidade Exclusiva",
-  "Suporte Técnico por 1 Ano",
-  "Atualizações Mensais de Moldes",
-  "Certificado de Conclusão",
+  "300+ Moldes de Feltro em Alta Qualidade",
+  "Download Instantâneo em PDF",
+  "Padrões Para Iniciantes e Experientes",
+  "Instruções Claras e Fáceis de Seguir",
+  "Moldes Prontos Para Imprimir",
 ];
 
 const bonuses = [
-  "🎁 BÔNUS 1: 20 Moldes Exclusivos de Ano Novo (R$ 97)",
-  "🎁 BÔNUS 2: Kit Completo de Precificação (R$ 67)",
-  "🎁 BÔNUS 3: Módulo de Marketing Digital (R$ 147)",
+  <>
+    <strong>
+      🎁 BÔNUS: Vídeo Aulas Exclusivas (
+      <span className="line-through">R$ 97,00</span>)
+    </strong>
+  </>,
 ];
 
-export function OfferSection() {
+export default function CTASection() {
   return (
     <section
       id="oferta"
@@ -44,12 +44,12 @@ export function OfferSection() {
           <CardContent className="p-8 md:p-12 space-y-8">
             <div className="text-center space-y-4">
               <div className="text-gray-500 line-through text-2xl">
-                De R$ 497,00
+                De R$ 49,90
               </div>
-              <div className="text-5xl md:text-6xl text-red-600">R$ 197,00</div>
-              <div className="text-gray-600">ou 12x de R$ 19,70</div>
+              <div className="text-5xl md:text-6xl text-red-600">R$ 14,90</div>
+              <div className="text-gray-600">ou 3x de R$ 5,32</div>
               <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full">
-                Economize R$ 300,00 hoje! 🎉
+                Economize R$ 35,00 hoje! 🎉
               </div>
             </div>
 
@@ -68,7 +68,7 @@ export function OfferSection() {
             </div>
 
             <div className="space-y-4 bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
-              <h3 className="text-2xl text-gray-900 flex items-center gap-2">
+              <h3 className="text-2xl text-gray-900 flex items-center gap-2 font-bold">
                 <Gift className="w-6 h-6 text-red-600" />
                 Bônus Exclusivos:
               </h3>
@@ -79,18 +79,19 @@ export function OfferSection() {
                   </div>
                 ))}
               </div>
-              <div className="text-center pt-2">
-                <span className="text-2xl text-green-600">
-                  Valor Total em Bônus: R$ 311,00
-                </span>
-              </div>
             </div>
 
             <Button
               size="lg"
               className="w-full bg-red-600 hover:bg-red-700 text-xl py-8"
             >
-              Garantir Minha Vaga Agora! 🎄
+              <a
+                href="https://pay.kiwify.com.br/zvXvH87"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Garantir Meu E-book Agora! 🎄
+              </a>
             </Button>
 
             <div className="text-center space-y-2 pt-4">
@@ -100,7 +101,7 @@ export function OfferSection() {
               </div>
               <div className="flex items-center justify-center gap-2 text-green-600">
                 <Check className="w-5 h-5" />
-                <span>Garantia de 7 Dias - Risco Zero</span>
+                <span>Garantia de 7 Dias</span>
               </div>
               <div className="flex items-center justify-center gap-2 text-green-600">
                 <Check className="w-5 h-5" />
