@@ -24,7 +24,8 @@ export default function HeroSection() {
           300 Moldes de Natal em Feltro
         </h1>
         <p className="text-xl md:text-2xl text-white/95 mb-8 leading-relaxed drop-shadow-md max-w-3xl mx-auto">
-          Transforme seu Natal com criações artesanais únicas. Padrões exclusivos para todos os níveis de habilidade.
+          Transforme seu Natal com criações artesanais únicas. Padrões
+          exclusivos para todos os níveis de habilidade.
         </p>
         <Button
           size="lg"

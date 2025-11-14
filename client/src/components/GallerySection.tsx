@@ -8,14 +8,12 @@ import reindeerImage from "@assets/generated_images/Felt_reindeer_ornaments_d6de
 import angelsImage from "@assets/generated_images/Felt_angels_and_bells_030bd56c.png";
 
 const galleryItems = [
-  { image: stockingImage, alt: "Botas e meias de Natal em feltro" },
-  { image: treeImage, alt: "Árvores de Natal em feltro" },
-  { image: santaImage, alt: "Papai Noel em feltro" },
-  { image: snowflakesImage, alt: "Flocos de neve e estrelas em feltro" },
-  { image: nativityImage, alt: "Presépio em feltro" },
-  { image: wreathImage, alt: "Guirlandas de Natal em feltro" },
-  { image: reindeerImage, alt: "Renas e animais em feltro" },
-  { image: angelsImage, alt: "Anjos e sinos em feltro" },
+  { image: "/images/image4.jpeg", alt: "Papai Noel em feltro" },
+  { image: "/images/image5.jpeg", alt: "Papai Noel em feltro" },
+  { image: "/images/image6.jpeg", alt: "Papai Noel em feltro" },
+  { image: "/images/image1.jpeg", alt: "Papai Noel em feltro" },
+  { image: "/images/image2.jpeg", alt: "Papai Noel em feltro" },
+  { image: "/images/image3.jpeg", alt: "Papai Noel em feltro" },
 ];
 
 export default function GallerySection() {

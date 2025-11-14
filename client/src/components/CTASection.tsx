@@ -66,10 +66,10 @@ export default function CTASection() {
           <div className="inline-block">
             <div className="text-center mb-4">
               <div className="text-sm text-muted-foreground line-through mb-1">
-                De R$ 97,00
+                De R$ 49,90
               </div>
               <div className="text-4xl md:text-5xl font-bold text-primary font-serif">
-                R$ 47,00
+                R$ 14,90
               </div>
               <div className="text-sm text-muted-foreground mt-1">
                 Oferta por tempo limitado

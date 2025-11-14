@@ -52,13 +52,14 @@ export default function VideoSection() {
               <iframe
                 width="100%"
                 height="100%"
+                id="video-presentation"
                 src="/videos/meu-video.mp4"
                 title="Apresentação do E-book"
                 frameBorder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 data-testid="video-presentation"
-                className="w-full max-w-sm mx-auto"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
