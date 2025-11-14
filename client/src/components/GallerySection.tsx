@@ -1,12 +1,3 @@
-import stockingImage from "@assets/generated_images/Felt_Christmas_stocking_ornament_ebca3c70.png";
-import treeImage from "@assets/generated_images/Felt_Christmas_tree_ornaments_723823d8.png";
-import santaImage from "@assets/generated_images/Felt_Santa_Claus_figure_f6af8a76.png";
-import snowflakesImage from "@assets/generated_images/Felt_snowflakes_and_stars_3b6b6a73.png";
-import nativityImage from "@assets/generated_images/Felt_nativity_scene_pieces_7739400a.png";
-import wreathImage from "@assets/generated_images/Felt_Christmas_wreath_a974125a.png";
-import reindeerImage from "@assets/generated_images/Felt_reindeer_ornaments_d6decf52.png";
-import angelsImage from "@assets/generated_images/Felt_angels_and_bells_030bd56c.png";
-
 const galleryItems = [
   { image: "/images/image4.jpeg", alt: "Papai Noel em feltro" },
   { image: "/images/image5.jpeg", alt: "Papai Noel em feltro" },

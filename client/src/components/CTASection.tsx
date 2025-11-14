@@ -1,95 +1,120 @@
-import { Button } from "@/components/ui/button";
-import { Download, Shield, Clock, Award } from "lucide-react";
+import { Button } from "./ui/button";
+import { Card, CardContent } from "./ui/card";
+import { Check, Clock, Gift } from "lucide-react";
 
-const features = [
-  {
-    icon: Download,
-    title: "Download Instantâneo",
-    description: "Acesso imediato ao PDF após a compra",
-  },
-  {
-    icon: Shield,
-    title: "Pagamento Seguro",
-    description: "Proteção total em sua transação",
-  },
-  {
-    icon: Clock,
-    title: "Acesso Vitalício",
-    description: "Use os moldes sempre que quiser",
-  },
-  {
-    icon: Award,
-    title: "Qualidade Premium",
-    description: "Moldes profissionais e detalhados",
-  },
+const included = [
+  "150+ Moldes de Feltro em Alta Qualidade",
+  "Tutoriais Passo a Passo em Vídeo",
+  "E-book: Como Vender seu Artesanato",
+  "Lista de Fornecedores Confiáveis",
+  "Acesso à Comunidade Exclusiva",
+  "Suporte Técnico por 1 Ano",
+  "Atualizações Mensais de Moldes",
+  "Certificado de Conclusão",
 ];
 
-export default function CTASection() {
-  const handlePurchaseClick = () => {
-    console.log("Botão de compra clicado");
-    window.open("https://pay.kiwify.com.br/zvXvH87", "_blank");
-  };
+const bonuses = [
+  "🎁 BÔNUS 1: 20 Moldes Exclusivos de Ano Novo (R$ 97)",
+  "🎁 BÔNUS 2: Kit Completo de Precificação (R$ 67)",
+  "🎁 BÔNUS 3: Módulo de Marketing Digital (R$ 147)",
+];
 
+export function OfferSection() {
   return (
-    <section className="py-12 md:py-20 px-4">
-      <div className="max-w-4xl mx-auto text-center space-y-12">
-        <div className="space-y-6">
-          <h2 className="font-serif text-3xl md:text-5xl font-semibold text-foreground">
-            Comece Hoje Mesmo
+    <section
+      id="oferta"
+      className="py-20 px-4 bg-gradient-to-b from-red-50 to-green-50"
+    >
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full mb-6">
+            <Clock className="w-5 h-5" />
+            <span>Oferta por Tempo Limitado!</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+            Comece Hoje Mesmo!
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Não perca a oportunidade de criar decorações natalinas únicas e
-            especiais. Com 300 moldes exclusivos, as possibilidades são
-            infinitas para tornar seu Natal mágico e memorável.
+          <p className="text-xl text-gray-600">
+            Tudo o que você precisa em um único pacote
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg bg-card"
-              data-testid={`feature-${index}`}
+        <Card className="border-4 border-red-300 shadow-2xl">
+          <CardContent className="p-8 md:p-12 space-y-8">
+            <div className="text-center space-y-4">
+              <div className="text-gray-500 line-through text-2xl">
+                De R$ 497,00
+              </div>
+              <div className="text-5xl md:text-6xl text-red-600">R$ 197,00</div>
+              <div className="text-gray-600">ou 12x de R$ 19,70</div>
+              <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full">
+                Economize R$ 300,00 hoje! 🎉
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl text-gray-900 flex items-center gap-2">
+                <Check className="w-6 h-6 text-green-600" />O que está incluído:
+              </h3>
+              <div className="grid gap-3">
+                {included.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4 bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
+              <h3 className="text-2xl text-gray-900 flex items-center gap-2">
+                <Gift className="w-6 h-6 text-red-600" />
+                Bônus Exclusivos:
+              </h3>
+              <div className="space-y-2">
+                {bonuses.map((bonus, index) => (
+                  <div key={index} className="text-gray-700">
+                    {bonus}
+                  </div>
+                ))}
+              </div>
+              <div className="text-center pt-2">
+                <span className="text-2xl text-green-600">
+                  Valor Total em Bônus: R$ 311,00
+                </span>
+              </div>
+            </div>
+
+            <Button
+              size="lg"
+              className="w-full bg-red-600 hover:bg-red-700 text-xl py-8"
             >
-              <div className="p-3 rounded-full bg-accent/10 text-accent">
-                <feature.icon className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold text-foreground">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
+              Garantir Minha Vaga Agora! 🎄
+            </Button>
 
-        <div className="space-y-6 pt-8">
-          <div className="inline-block">
-            <div className="text-center mb-4">
-              <div className="text-sm text-muted-foreground line-through mb-1">
-                De R$ 49,90
+            <div className="text-center space-y-2 pt-4">
+              <div className="flex items-center justify-center gap-2 text-green-600">
+                <Check className="w-5 h-5" />
+                <span>Acesso Imediato após o Pagamento</span>
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-primary font-serif">
-                R$ 14,90
+              <div className="flex items-center justify-center gap-2 text-green-600">
+                <Check className="w-5 h-5" />
+                <span>Garantia de 7 Dias - Risco Zero</span>
               </div>
-              <div className="text-sm text-muted-foreground mt-1">
-                Oferta por tempo limitado
+              <div className="flex items-center justify-center gap-2 text-green-600">
+                <Check className="w-5 h-5" />
+                <span>Pagamento 100% Seguro</span>
               </div>
             </div>
-          </div>
+          </CardContent>
+        </Card>
 
-          <Button
-            size="lg"
-            onClick={handlePurchaseClick}
-            data-testid="button-purchase"
-            className="text-xl px-16 py-8 rounded-full shadow-xl"
-          >
-            Adquirir Agora
-          </Button>
-
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <Shield className="h-4 w-4 text-accent" />
-            <span>Compra 100% segura e garantida</span>
-          </div>
+        <div className="text-center mt-8">
+          <p className="text-gray-600">
+            ⚠️ Essa oferta especial expira em:{" "}
+            <span className="text-red-600">23:47:32</span>
+          </p>
         </div>
       </div>
     </section>

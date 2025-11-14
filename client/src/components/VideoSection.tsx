@@ -43,6 +43,10 @@ export default function VideoSection() {
                   <span className="text-accent text-xl">✓</span>
                   <span>Moldes prontos para imprimir</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent text-xl">✓</span>
+                  <span>Bônus Vídeo Aula</span>
+                </li>
               </ul>
             </div>
           </div>
