@@ -11,9 +11,9 @@ export default function Home() {
     <div className="min-h-screen">
       <HeroSection />
       <VideoSection />
+      <GallerySection />
       <CTASection />
       <Testimonials />
-      <GallerySection />
       <SalePopup />
       <Footer />
     </div>
