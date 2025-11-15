@@ -103,7 +103,7 @@ export default function CTASection() {
             <div className="space-y-4 bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
               <h3 className="text-2xl text-gray-900 flex items-center gap-2 font-bold">
                 <Gift className="w-6 h-6 text-red-600" />
-                Bônus Exclusivos:
+                Bônus Exclusivo:
               </h3>
               <div className="space-y-2">
                 {bonuses.map((bonus, index) => (
