@@ -79,7 +79,9 @@ export default function CTASection() {
               <div className="text-muted-foreground line-through text-2xl">
                 De R$ 49,90
               </div>
-              <div className="text-5xl md:text-6xl text-red-600 dark:text-red-400">R$ 14,90</div>
+              <div className="text-5xl md:text-6xl text-red-600 dark:text-red-400">
+                R$ 14,90
+              </div>
               <div className="text-muted-foreground">ou 3x de R$ 5,32</div>
               <div className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full">
                 Economize R$ 35,00 hoje!
@@ -88,7 +90,8 @@ export default function CTASection() {
 
             <div className="space-y-4">
               <h3 className="text-2xl text-foreground flex items-center gap-2">
-                <Check className="w-6 h-6 text-green-600 dark:text-green-400" />O que está incluído:
+                <Check className="w-6 h-6 text-green-600 dark:text-green-400" />
+                O que está incluído:
               </h3>
               <div className="grid gap-3">
                 {included.map((item, index) => (
@@ -120,7 +123,7 @@ export default function CTASection() {
               className="w-full bg-red-600 dark:bg-red-700 text-xl py-8"
             >
               <a
-                href="https://pay.kiwify.com.br/zvXvH87"
+                href="https://checkout.potinhodeoracoes.site/VCCL1O8SCL9B"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="button-purchase"
