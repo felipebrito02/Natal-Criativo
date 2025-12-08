@@ -25,10 +25,10 @@ export default function GallerySection() {
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-lg bg-card hover-elevate transition-transform duration-300"
+              className="group relative rounded-lg shadow-lg bg-card hover-elevate"
               data-testid={`gallery-item-${index}`}
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden rounded-lg">
                 <img
                   src={item.image}
                   alt={item.alt}

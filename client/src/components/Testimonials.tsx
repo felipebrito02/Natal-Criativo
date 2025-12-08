@@ -36,10 +36,10 @@ export default function Testimonials() {
   return (
     <section className="mt-20">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl text-foreground mb-4">
           O que nossas alunas dizem
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-muted-foreground">
           Mais de 5.000 artesãs transformando feltro em sucesso
         </p>
       </div>
@@ -56,15 +56,15 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-gray-700 italic">"{testimonial.text}"</p>
+              <p className="text-muted-foreground italic">"{testimonial.text}"</p>
 
-              <div className="flex justify-between items-center pt-4 border-t">
+              <div className="flex justify-between items-center gap-2 pt-4 border-t">
                 <div>
-                  <div className="text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.location}</div>
+                  <div className="text-foreground">{testimonial.name}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-green-600">{testimonial.revenue}</div>
+                  <div className="text-green-600 dark:text-green-400">{testimonial.revenue}</div>
                 </div>
               </div>
             </CardContent>

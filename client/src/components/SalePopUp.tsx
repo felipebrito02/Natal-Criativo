@@ -121,9 +121,10 @@ export default function SocialProofPopup() {
 
   return (
     <div
-      className={`fixed bottom-4 right-4 bg-white border shadow-lg rounded-xl p-4 w-72 flex items-center gap-3 transition-transform transform ${
+      className={`fixed bottom-4 right-4 bg-card border shadow-lg rounded-xl p-4 w-72 flex items-center gap-3 transition-transform transform ${
         visible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
       }`}
+      data-testid="popup-sale"
     >
       {currentPurchase.avatar && (
         <img
@@ -132,11 +133,11 @@ export default function SocialProofPopup() {
           className="w-10 h-10 rounded-full border"
         />
       )}
-      <div className="text-sm text-gray-700">
+      <div className="text-sm text-muted-foreground">
         <p>
-          <strong>{currentPurchase.name}</strong> acabou de adquirir o E-book.
+          <strong className="text-foreground">{currentPurchase.name}</strong> acabou de adquirir o E-book.
         </p>
-        <p className="text-red-600 font-bold">{currentPurchase.value}</p>
+        <p className="text-red-600 dark:text-red-400 font-bold">{currentPurchase.value}</p>
       </div>
     </div>
   );

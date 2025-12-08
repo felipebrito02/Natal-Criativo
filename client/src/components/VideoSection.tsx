@@ -24,18 +24,16 @@ export default function VideoSection() {
 
           <div className="order-first lg:order-last">
             <div className="aspect-video rounded-xl shadow-2xl overflow-hidden bg-muted">
-              <iframe
-                width="100%"
-                height="100%"
+              <video
                 id="video-presentation"
                 src="/videos/meu-video.mp4"
-                title="Apresentação do E-book"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                controls
+                playsInline
                 data-testid="video-presentation"
                 className="w-full h-full object-cover"
-              />
+              >
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
             </div>
           </div>
         </div>
