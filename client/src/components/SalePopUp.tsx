@@ -58,7 +58,7 @@ const fakePurchases: Purchase[] = [
     avatar: "https://i.pravatar.cc/40?img=21",
   },
   {
-    name: "Camila Martins",
+    name: "Camila Martin",
     value: "R$ 14,90",
     avatar: "https://i.pravatar.cc/40?img=23",
   },
