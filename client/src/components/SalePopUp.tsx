@@ -96,7 +96,7 @@ export default function SocialProofPopup() {
 
     setTimeout(() => {
       setVisible(false);
-    }, 5000); // popup fica visível 4s
+    }, 5000); // popup fica visível 5s
   };
 
   // Aparece imediatamente ao carregar e depois de tempos em tempos
